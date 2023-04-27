@@ -22,6 +22,6 @@ def signIn():
 def viewBDay():
     return render_template("BT-ViewBDay.html")
 
-@views.route('/createaccount.html')
+@views.route('/BT-CreateAccount.html')
 def createaccount():
-    return render_template("createaccount.html")
+    return render_template("BT-CreateAccount.html")
