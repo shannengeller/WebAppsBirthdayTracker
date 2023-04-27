@@ -55,20 +55,32 @@
         </ul>
 
         <div class="form-group" style="text-align:center; font-family: 'Verdana'; font-size: 16px; width: 40%; margin-left: auto; margin-right: auto; margin-top: 100px;color: black; background-color: 918398; padding: 15px; border-radius: 15px;">
-			<h1 style="padding: 15px; ">Sign In Below!</h1>
+            <h1 style="padding: 15px; ">Sign In Below!</h1>
             <form class="form-horizontal">
-				<label type="label" class="control-label" for="inputEmail">Email:&nbsp;&nbsp;&nbsp;</label>
-				<input type="text" id="inputEmail" placeholder="Email">
-				<br>
-				<label type="label" class="control-label" for="inputPassword" style="text-align:center;">Password:&nbsp;&nbsp;&nbsp;</label>
-				<input type="text" id="inputPassword" placeholder="Password">
-				<br>
-				<div class="text-center">
-					<button type="button" class="btn btn-primary" style="height: 50px; width: 100px; font-size: 20px; margin-left: auto; margin-right: auto; margin-top: 30px;" onclick="submitBDay()">Sign In</button>
-				</div>
-			</form>
-		</div>
+                <div class="form-group">
+                    <label for="inputEmail" class="col-sm-4 control-label">Email:&nbsp;&nbsp;&nbsp;</label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" id="inputEmail" placeholder="Email">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputPassword" class="col-sm-4 control-label">Password:&nbsp;&nbsp;&nbsp;</label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" id="inputPassword" placeholder="Password">
+                    </div>
+                </div>
+                <div class="text-center" style="margin-top: 30px;">
+                    <button type="button" class="btn btn-primary" style="height: 50px; width: 100px; font-size: 20px; margin-left: auto; margin-right: auto;" onclick="submitBDay()">Sign In</button>
+                </div>
 
+                <p style="font-size: 18px; margin-top: 15px;">Or</p>
+
+                <div class="text-center">
+                    <button type="button" class="btn btn-primary" style="height: 50px; width: 175px; font-size: 20px; margin-left: auto; margin-right: auto; margin-top: 15px;" onclick="createAccount()">Create Account</button>
+                </div>
+    
+            </form>
+        </div>
 
     </body>
 </html>
