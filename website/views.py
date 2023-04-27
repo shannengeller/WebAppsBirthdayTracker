@@ -6,14 +6,18 @@ views = Blueprint('views', __name__)
 def home():
     return render_template("BT-Intro.html")
 
-# @views.route('/EnterBday')
-# def enterBDay():
-#     return render_template("BT-EnterBDay.html")
+@views.route('/BT-Intro.html')
+def intro():
+    return render_template("BT-Intro.html")
 
-# @views.route('/SignIn')
-# def enterBDay():
-#     return render_template("BT-SignIn.html")
+@views.route('/BT-EnterBDay.html')
+def enterBDay():
+    return render_template("BT-EnterBDay.html")
 
-# @views.route('/ViewBdays')
-# def enterBDay():
-#     return render_template("BT-ViewBDay.html")
+@views.route('/BT-SignIn.html')
+def signIn():
+    return render_template("BT-SignIn.html")
+
+@views.route('/BT-ViewBDay.html')
+def viewBDay():
+    return render_template("BT-ViewBDay.html")
