@@ -17,12 +17,12 @@ def init_db():
 init_db()
 
 
-@app.route('/')
+@models.route('/')
 def index():
     return render_template('BT-EnterBDay.html')
 
-@app.route('/add_birthday', methods=['POST'])
-def add_birthday():
+@models.route('/BT-EnterBDay.html', methods=['POST'])
+def enterBDay():
     first_name = request.form['inputFirstName']
     last_name = request.form['inputLastName']
     relationship = request.form['relationship']

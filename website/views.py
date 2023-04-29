@@ -1,6 +1,8 @@
 from flask import Blueprint, render_template
 
+
 views = Blueprint('views', __name__)
+
 
 @views.route('/')
 def home():
@@ -10,7 +12,7 @@ def home():
 def intro():
     return render_template("BT-Intro.html")
 
-@views.route('/BT-EnterBDay.html')
+@views.route('/BT-EnterBDay.html', methods=['POST', 'GET'])
 def enterBDay():
     return render_template("BT-EnterBDay.html")
 
