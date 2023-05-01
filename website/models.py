@@ -37,5 +37,15 @@ def enterBDay():
 
     return redirect(url_for('index'))
 
+@models.route('/BT-ViewBDays.html', methods=['GET'])
+def displayBDays():
+    conn = sqlite3.connect('birthdays.db')
+    cur = conn.cursor()
+    cur.execute('''SELECT * FROM birthdays''')
+    data = cur.fetchall()
+    conn.close()
+
+    return render_template('birthdays.html', data=data)
+
 if __name__ == '__main__':
     app.run(debug=True)

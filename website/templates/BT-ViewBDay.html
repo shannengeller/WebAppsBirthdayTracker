@@ -55,7 +55,28 @@
 		</ul>
 
 		<p title="Birthday Tracker Enter BDay" style="text-align:left; font-family: 'Verdana'; font-size: 14px; width: 600px; margin-left: auto; margin-right: auto; margin-top: 100px;color: black; background-color: 918398; padding: 15px; border-radius: 15px;">
-		- This is the page for viewing birthdays
+			<table>
+				<thead>
+				  <tr>
+					<th>First Name</th>
+					<th>Last Name</th>
+					<th>Relationship</th>
+					<th>Date of Birth</th>
+					<th>Gift Ideas</th>
+				  </tr>
+				</thead>
+				<tbody>
+				  {% for row in data %}
+				  <tr>
+					<td>{{ row[1] }}</td>
+					<td>{{ row[2] }}</td>
+					<td>{{ row[3] }}</td>
+					<td>{{ row[4] }}</td>
+					<td>{{ row[5] }}</td>
+				  </tr>
+				  {% endfor %}
+				</tbody>
+			  </table>
 		</p>
 
 
