@@ -41,10 +41,6 @@ def enterBDay2():
     conn.close()
     return render_template("BT-EnterBDay.html")
 
-@views.route('/BT-SignIn.html')
-def signIn():
-    return render_template("BT-SignIn.html")
-
 @views.route('/BT-ViewBDay.html')
 def viewBDay():
     conn = sqlite3.connect('birthdays.db')
@@ -54,7 +50,3 @@ def viewBDay():
     conn.close()
 
     return render_template('BT-ViewBDay.html', data=data)
-
-@views.route('/BT-CreateAccount.html')
-def createaccount():
-    return render_template("BT-CreateAccount.html")
