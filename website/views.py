@@ -47,7 +47,13 @@ def signIn():
 
 @views.route('/BT-ViewBDay.html')
 def viewBDay():
-    return render_template("BT-ViewBDay.html")
+    conn = sqlite3.connect('birthdays.db')
+    cur = conn.cursor()
+    cur.execute('''SELECT * FROM birthdays''')
+    data = cur.fetchall()
+    conn.close()
+
+    return render_template('BT-ViewBDay.html', data=data)
 
 @views.route('/BT-CreateAccount.html')
 def createaccount():

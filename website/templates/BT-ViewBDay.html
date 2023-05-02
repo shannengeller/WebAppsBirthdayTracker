@@ -40,7 +40,18 @@
 				border-color: C4B8B4;
 				border-width: 5px;
 				margin: -5px;
-			}		
+			}
+			.col {
+				border: 3px solid;
+				border-color: #3F2D4C;
+				border-collapse: collapse;
+				padding: 5px;
+			}
+			.col2{
+				border: 3px solid;
+				border-color: #3F2D4C;
+				border-collapse: collapse;
+			}
 		</style>
 	</head>
 
@@ -54,30 +65,31 @@
 		  	<li style="float: left;"><a style="pointer-events: none;">Birthday Tracker</a></li>
 		</ul>
 
-		<p title="Birthday Tracker Enter BDay" style="text-align:left; font-family: 'Verdana'; font-size: 14px; width: 600px; margin-left: auto; margin-right: auto; margin-top: 100px;color: black; background-color: 918398; padding: 15px; border-radius: 15px;">
-			<table>
+		
+		<div style="width: 40%; background-color: 918398; padding: 15px; border-radius: 15px; margin-left: auto; margin-right: auto; margin-top: 100px; width: 40%; text-align:center;">
+			<table style="margin-left: auto; margin-right: auto; text-align:left; font-family: 'Verdana'; font-size: 14px; color: black; border: 1px solid; border-color: #3F2D4C; border-collapse: collapse; background-color: lightgray; width: 80%;">
 				<thead>
-				  <tr>
-					<th>First Name</th>
-					<th>Last Name</th>
-					<th>Relationship</th>
-					<th>Date of Birth</th>
-					<th>Gift Ideas</th>
+				  <tr class="col2">
+					<th class="col">First Name</th>
+					<th class="col">Last Name</th>
+					<th class="col">Relationship</th>
+					<th class="col">Date of Birth</th>
+					<th class="col">Gift Ideas</th>
 				  </tr>
 				</thead>
 				<tbody>
 				  {% for row in data %}
-				  <tr>
-					<td>{{ row[1] }}</td>
-					<td>{{ row[2] }}</td>
-					<td>{{ row[3] }}</td>
-					<td>{{ row[4] }}</td>
-					<td>{{ row[5] }}</td>
+				  <tr class="col2">
+					<td class="col">{{ row[1] }}</td>
+					<td class="col">{{ row[2] }}</td>
+					<td class="col">{{ row[3] }}</td>
+					<td class="col">{{ row[4] }}</td>
+					<td class="col">{{ row[5] }}</td>
 				  </tr>
 				  {% endfor %}
 				</tbody>
-			  </table>
-		</p>
+			</table>
+		</div>
 
 
 	</body>
